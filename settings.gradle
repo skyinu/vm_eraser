@@ -1,2 +1,3 @@
 rootProject.name = "vm_eraser"
 include ':app'
+include ':lib'
