@@ -10,10 +10,10 @@ extern "C" {
 /*
  * Class:     com_skyinu_vm_eraser_VMEraser
  * Method:    eraser
- * Signature: (Ljava/lang/String;)Z
+ * Signature: (JJ)I
  */
-JNIEXPORT jboolean JNICALL Java_com_skyinu_vm_1eraser_VMEraser_eraser
-  (JNIEnv *, jclass, jstring);
+JNIEXPORT jint JNICALL Java_com_skyinu_vm_1eraser_VMEraser_eraser
+  (JNIEnv *, jclass, jlong, jlong);
 
 #ifdef __cplusplus
 }
