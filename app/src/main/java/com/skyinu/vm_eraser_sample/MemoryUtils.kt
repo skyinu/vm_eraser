@@ -13,7 +13,7 @@ object MemoryUtils {
         val bufferedReader = BufferedReader(InputStreamReader(FileInputStream(mmapFile)))
         bufferedReader.lineSequence().iterator().forEach {
             if (it.startsWith("VmSize")) {
-                return it.split(" ")[1].toLong()
+                return it.split(Regex("\\s"))[1].toLong()
             }
         }
         return 0
