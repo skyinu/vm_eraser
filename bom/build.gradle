@@ -1,0 +1,22 @@
+plugins {
+    id 'java-platform'
+    id 'maven-publish'
+}
+
+dependencies {
+    constraints{
+        api 'androidx.core:core-ktx:1.3.1'
+        api 'androidx.appcompat:appcompat:1.2.0'
+        api "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    }
+}
+
+publishing{
+    publications{
+        //以下maven并非关键字，可自定义
+        maven(MavenPublication) {
+            //通过java-platform生成BOM
+            from components.javaPlatform
+        }
+    }
+}
