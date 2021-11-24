@@ -7,7 +7,7 @@ just a bridge to call munmap method to help you free some virtual memory which i
 
 ```
 dependencies {
-	implementation 'com.github.skyinu:vm_eraser:0.0.1'
+	implementation 'com.github.skyinu:vm_eraser:0.0.2'
 }
 ```
 
@@ -18,3 +18,7 @@ dependencies {
 ```
 VMEraser.eraser("/system/fonts/(?!Roboto).*\\.ttf")
 ```
+
+## Publish
+
+create a release at github and then jitpack.io will release a new version
