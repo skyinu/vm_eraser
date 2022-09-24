@@ -7,6 +7,9 @@ object MemoryFileParser {
     private const val PROC_FILE_NAME = "proc"
     private const val MEMORY_FILE_NAME = "maps"
 
+    /**
+     * @hide
+     */
     fun parse(): List<MapItemModel> {
         val mapItemModels = mutableListOf<MapItemModel>()
         val mmapFile = File(getMMapFilePath())
